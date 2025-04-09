@@ -1,0 +1,29 @@
+* {
+  font-size: large;
+  margin: 0.5em;
+  padding: 0.25em;
+  background-color: gainsboro;
+  font-family: "Spectral", serif;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 7.5%;
+}
+
+.legenda {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+#enviar {
+  border-radius: 10px;
+  cursor: pointer;
+  transition: ease;
+}
+
+#enviar:hover {
+  transform: scale(1.05);
+}

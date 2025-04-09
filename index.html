@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cálculo do IMC</title>
+<!--CSS E FONTES-->
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+</head>
+<body>
+<!--FORMULÁRIO -->
+  <form class="form" method="post" onsubmit="myFunc(event)">
+    <fieldset>
+      <legend class="legenda">Cálculo do IMC</legend>
+      <label for="peso">Informe o peso: (kg)</label>
+      <br>
+      <input type="text" id="peso" name="peso">
+      <br>
+      <label for="altura">Informe a altura: (cm)</label>
+      <br>
+      <input type="text" id="altura" name="altura">
+      <br>
+      <input type="submit" id="enviar">
+    </fieldset>
+  </form>
+<!--SCRIPT-->
+  <script>
+    function myFunc(event) {
+      event.preventDefault(); //PREVINE O CARREGAMENTO
+//CONSTANTES
+      const PESO = Number(document.getElementById("peso").value);
+      const ALTURA = Number(document.getElementById("altura").value) / 100;
+//VALIDAÇÃO DO INPUT
+      if (isNaN(PESO) || isNaN(ALTURA)) {
+        alert("Por favor, insira valores válidos para peso e altura.");
+        return;
+      }
+//VARIÁVEIS
+      let imc = (PESO / (ALTURA ** 2)).toFixed(2);
+      let resultado = "";
+//ESTRUT. DE DECISÃO
+      if (imc < 18.5) {
+        resultado = "Classificação: Abaixo do peso";
+      } else if (imc >= 18.5 && imc <= 24.9) {
+        resultado = "Classificação: Peso normal";
+      } else if (imc >= 25 && imc <= 29.9) {
+        resultado = "Classificação: Sobrepeso";
+      } else if (imc >= 30 && imc < 34.5) {
+        resultado = "Classificação: Obesidade";
+      } else {
+        resultado = "Classificação: Obesidade (grau elevado)";
+      }
+//ALERTA
+      alert(`Seu IMC é: ${imc}\n${resultado}`);
+    }
+  </script>
+</body>
+</html>
