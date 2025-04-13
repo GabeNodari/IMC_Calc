@@ -1,9 +1,21 @@
 * {
   font-size: large;
-  margin: 0.5em;
-  padding: 0.25em;
-  background-color: gainsboro;
+  margin: .5em;
+  padding: .25em;
+  background-color: #edd1b0;
   font-family: "Spectral", serif;
+}
+
+fieldset {
+  padding: .5em;
+  border: solid #0000005e;
+  border-radius: 10px;
+}
+
+input {
+  background-color: #ffffff;
+  border: solid 2px #0000005e;
+  border-radius: 10px;
 }
 
 .form {
@@ -15,10 +27,15 @@
 
 .legenda {
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1em;
 }
 
 #enviar {
+  padding: .5em;
+  background-color: #32a517;
+  color: #ffffff;
+  font-size: medium;
+  border: solid 2px #0000005e;
   border-radius: 10px;
   cursor: pointer;
   transition: ease;
