@@ -2,7 +2,7 @@
   font-size: large;
   margin: .5em;
   padding: .25em;
-  background-color: #edd1b0;
+  background-color: #ffe0bd;
   font-family: "Spectral", serif;
 }
 
@@ -10,6 +10,7 @@ fieldset {
   padding: .5em;
   border: solid #0000005e;
   border-radius: 10px;
+  background-color: #ffffff;
 }
 
 input {
@@ -18,11 +19,21 @@ input {
   border-radius: 10px;
 }
 
+legend {
+  background-color: #ffffff;
+  border: solid 2px #0000005e;
+  border-radius: 10px;
+}
+
+label {
+  background-color: #ffffff;
+}
+
 .form {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 7.5vh;
+  margin-top: 7.5%;
 }
 
 .legenda {
